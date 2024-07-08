@@ -2,32 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer base {
+    body { @apply w-full h-screen bg-dark-cyan text-glacier-white antialiased selection:bg-clover-green/75 selection:text-white flex flex-col items-center justify-start }
+    header,
+    footer .container { @apply w-full p-4 md:px-32 flex items-center justify-between }
+    header { @apply max-w-app-content }
+    main { @apply w-full max-w-app-content flex flex-col items-center gap-[5.625rem] xl:gap-40 px-4 xs:px-8 md:px-36 lg:px-40 py-12 md:py-20 lg:py-24 xl:py-32 }
+    footer .container { @apply max-w-app-content }
+    p, span, input { @apply truncate }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        -webkit-text-fill-color: #FFFFFFBF;
+        transition: background-color 5000s ease-in-out 0s;
+        box-shadow: inset 0 0 1rem 1rem #ffffff25;
+    }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    ::-webkit-scrollbar            { @apply w-2 }
+    ::-webkit-scrollbar:horizontal { @apply h-2 }
+    ::-webkit-scrollbar,
+    ::-webkit-scrollbar:horizontal { @apply bg-black/15 rounded-sm }
+    ::-webkit-scrollbar-thumb      { @apply bg-zinnia rounded-sm }
+    ::-webkit-scrollbar-corner     { @apply bg-transparent }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    .debug * { @apply border border-swift-red }
+    .mark-text { @apply text-paw-paw }
+    .flex-center { @apply flex items-center justify-center }
+    .text-color-animate { @apply bg-clip-text bg-zinnia bg-gradient-to-r from-zinnia via-creepy-green bg-[length:700%_700%] text-transparent animate-[color_5s_linear_infinite] }
+}
+
+@keyframes color {
+    from { background-position: 0% 50%; }
+    to { background-position: 100% 50%; }
 }
