@@ -5,7 +5,7 @@ import type {
 
 import { rootUrl } from '@PeachCodeData'
 
-// import { Header } from '@/components/header'
+import { Header } from '@/components/header'
 // import { Footer } from '@/components/footer'
 
 import { NotoSans } from './fonts'
@@ -140,7 +140,7 @@ export default function RootLayout({
     return (
         <html lang='pt-BR'>
             <body className={NotoSans.className} suppressHydrationWarning={suppressHydrationWarning}>
-                {/* <Header /> */}
+                <Header />
                 {children}
                 {/* <Footer /> */}
             </body>

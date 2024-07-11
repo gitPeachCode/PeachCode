@@ -4,7 +4,6 @@
 
 @layer base {
     body { @apply w-full h-screen bg-dark-cyan text-glacier-white antialiased selection:bg-clover-green/75 selection:text-white flex flex-col items-center justify-start }
-    header,
     footer .container { @apply w-full p-4 md:px-32 flex items-center justify-between }
     header { @apply max-w-app-content }
     main { @apply w-full max-w-app-content flex flex-col items-center gap-[5.625rem] xl:gap-40 px-4 xs:px-8 md:px-36 lg:px-40 py-12 md:py-20 lg:py-24 xl:py-32 }
@@ -15,9 +14,9 @@
     input:-webkit-autofill:hover,
     input:-webkit-autofill:focus,
     input:-webkit-autofill:active {
-        -webkit-text-fill-color: #FFFFFFBF;
+        -webkit-text-fill-color: #FFFFFF7F;
         transition: background-color 5000s ease-in-out 0s;
-        box-shadow: inset 0 0 1rem 1rem #ffffff25;
+        box-shadow: inset 0 0 0 5rem #263c44;
     }
 
     ::-webkit-scrollbar            { @apply w-2 }
@@ -32,10 +31,21 @@
     .debug * { @apply border border-swift-red }
     .mark-text { @apply text-paw-paw }
     .flex-center { @apply flex items-center justify-center }
+    .filter-zinnia { filter: brightness(0) saturate(100%) invert(59%) sepia(21%) saturate(2442%) hue-rotate(326deg) brightness(101%) contrast(99%); }
     .text-color-animate { @apply bg-clip-text bg-zinnia bg-gradient-to-r from-zinnia via-creepy-green bg-[length:700%_700%] text-transparent animate-[color_5s_linear_infinite] }
+    .stretch-box-animate { @apply animate-[stretch_500ms_linear_both] }
+    .tighten-box-animate { @apply animate-[tighten_500ms_linear_both] }
 }
 
 @keyframes color {
     from { background-position: 0% 50%; }
     to { background-position: 100% 50%; }
+}
+@keyframes stretch {
+    from { width: 0; }
+    to { width: 100%; }
+}
+@keyframes tighten {
+    from { width: 100%; }
+    to { width: 0; }
 }
