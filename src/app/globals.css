@@ -5,7 +5,7 @@
 @layer base {
     body { @apply w-full h-screen bg-dark-cyan text-glacier-white antialiased selection:bg-clover-green/75 selection:text-white flex flex-col items-center justify-start }
     header, main, footer .container { @apply max-w-app-content }
-    main { @apply w-full flex flex-col items-center gap-[5.625rem] xl:gap-40 px-4 xs:px-8 md:px-36 lg:px-40 py-12 md:py-20 lg:py-24 xl:py-32 }
+    main { @apply w-full flex flex-col items-center gap-[5.625rem] xl:gap-40 px-4 xs:px-8 md:px-[7.5rem] py-12 md:py-20 lg:py-24 xl:py-32 }
     p, span, input { @apply truncate }
 
     input:-webkit-autofill,

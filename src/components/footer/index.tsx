@@ -17,8 +17,8 @@ export const Footer = () => {
 
     return (
         <footer className='w-full bg-white/[0.01] border-t border-white/5 flex justify-center pb-12 sm:pb-4'>
-            <div className='w-full p-4 md:px-32 grid grid-cols-1 gap-y-16 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-3'>
-                <div className='w-fit mx-auto flex flex-col gap-8'>
+            <div className='w-full max-w-app-content p-4 md:px-[7.5rem] grid grid-cols-1 gap-y-16 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-3'>
+                <div className='w-fit mx-auto lg:mx-0 flex flex-col gap-8'>
                     <p className={`${AlumniSans.className} text-center sm:text-start md:text-center lg:text-start font-black tracking-[1px] text-3xl`}>
                         <span className='text-dark-cyan [text-shadow:_-1px_-1px_0_rgb(253_119_82),_-1px_1px_0_rgb(253_119_82),_1px_1px_0_rgb(253_119_82),_1px_-1px_0_rgb(253_119_82)] selection:text-[#125b32]'>PEACH</span>
                         <span>CODE</span>

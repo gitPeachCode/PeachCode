@@ -87,7 +87,7 @@ export const Header = () => {
     }
 
     return (
-        <header className='w-full p-4 md:px-32'>
+        <header className='w-full p-4 md:px-[7.5rem]'>
             <div className='w-full flex flex-col items-center mb-8'>
                 <span className='w-12 h-12 bg-[url("/favicon.svg")] bg-no-repeat bg-center bg-cover' />
 
@@ -97,7 +97,7 @@ export const Header = () => {
                 </p>
             </div>
 
-            <div className='w-full flex items-center justify-between gap-4 mx-2 sm:mx-0 md:mx-2 lg:mx-0'>
+            <div className='w-full flex items-center justify-between gap-4'>
                 <span className='w-[1px] hidden sm:flex md:hidden lg:flex' />
 
                 <PopoverMenu routerPath={router} headerLinks={headerLinks} />
